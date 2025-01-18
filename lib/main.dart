@@ -1,6 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_sns_app/firebase_options.dart';
+import 'package:riverpod_sns_app/screens/chat_screen.dart';
+import 'package:riverpod_sns_app/screens/feed_screen.dart';
+import 'package:riverpod_sns_app/screens/settings_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
@@ -42,9 +46,9 @@ class _MainScreenState extends State<MainScreen> {
       body: IndexedStack(
         index: _currentIndex,
         children: const [
-          Center(child: Text("1")),
-          Center(child: Text("2")),
-          Center(child: Text("3")),
+          FeedScreen(),
+          ChatScreen(),
+          SettingsScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
