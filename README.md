@@ -30,7 +30,7 @@ Flutter와 Firebase를 사용하여 사람들이 소통할 수 있는 SNS 앱을
 lib/
 ├── main.dart
 ├── screens/
-│   ├── home_screen.dart
+│   ├── feed_screen.dart
 │   ├── chat_screen.dart
 │   ├── settings_screen.dart
 │   ├── post_detail_screen.dart
